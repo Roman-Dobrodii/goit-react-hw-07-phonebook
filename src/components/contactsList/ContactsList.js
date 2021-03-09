@@ -30,7 +30,6 @@ const ContactsList = ({ items, contacts }) => {
 const mapStateToProps = (state) => {
   const getFilteredContact = contactSelectors.getContactsFiltered(state);
 
-  console.log("items", getFilteredContact);
   return {
     items: getFilteredContact,
     contacts: contactSelectors.getContacts(state),
