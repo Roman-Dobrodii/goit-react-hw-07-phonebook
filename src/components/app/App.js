@@ -14,13 +14,12 @@ class App extends Component {
   state = {
     showContacts: false,
   };
-  componentDidMount() {
-    this.props.onFetchContacts();
-  }
-  componentDidUpdate(prevProps, nextProps) {
-    console.log("prevProps", prevProps);
-    console.log("nextProps", nextProps);
-  }
+  // componentDidMount() {
+  //   this.props.onFetchContacts();
+  // }
+  // componentDidUpdate(prevProps, nextProps) {
+
+  // }
 
   render() {
     return (
@@ -65,7 +64,6 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("state", state);
   const getfilteredContacts = contactSelectors.getContactsFiltered(state);
 
   return {
